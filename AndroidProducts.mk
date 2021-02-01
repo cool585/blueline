@@ -15,4 +15,4 @@
 #
 
 PRODUCT_MAKEFILES := \
-    $(LOCAL_DIR)/scorpion.mk
+    $(LOCAL_DIR)/superior_blueline.mk

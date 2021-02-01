@@ -22,7 +22,13 @@
 #
 
 # Include common configuration
-include vendor/scorpion/config/common.mk
+include vendor/superior/config/common.mk
+
+# Boot Animation
+TARGET_BOOT_ANIMATION_RES := 1080
+
+# Official SuperiorOS
+DEVICE_MAINTAINERS="Dhinesh"
 
 # Inherit from those products. Most specific first.
 $(call inherit-product, device/google/crosshatch/aosp_blueline.mk)
@@ -31,7 +37,7 @@ $(call inherit-product, device/google/crosshatch/aosp_blueline.mk)
 $(call inherit-product, $(SRC_TARGET_DIR)/product/aosp_base_telephony.mk)
 $(call inherit-product, $(SRC_TARGET_DIR)/product/core_64_bit.mk)
 
-PRODUCT_NAME := scorpion_blueline
+PRODUCT_NAME := superior_blueline
 PRODUCT_DEVICE := blueline
 PRODUCT_BRAND := google
 PRODUCT_MODEL := Pixel 3
@@ -46,8 +52,8 @@ PRODUCT_PROPERTY_OVERRIDES += \
     ro.build.fingerprint=google/blueline/blueline:11/RQ1A.210105.003/7005429:user/release-keys
 
 # Active Edge
-PRODUCT_PACKAGES += \
-    ElmyraService
+#PRODUCT_PACKAGES += \
+#    ElmyraService
 
 $(call inherit-product-if-exists, vendor/google/blueline/blueline-vendor.mk)
-$(call inherit-product-if-exists, vendor/pixelgapps/pixel-gapps.mk)
+#$(call inherit-product-if-exists, vendor/pixelgapps/pixel-gapps.mk)
